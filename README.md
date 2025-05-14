@@ -12,3 +12,14 @@ Spend hours assessing risks, clause types, or ambiguous language.
 Miss inconsistencies or compliance red flags hidden in legal jargon.
 
 This is time-consuming, error-prone, and non-scalable.
+
+
+## Architecture 
+
+
+PDF → Extracted Text → Chunking → Embedding → Vector DB + Triplet Extraction
+
+                        ↓                        ↓     
+                Query (user) —→ RAG (LLM + Retrieval)
+                                ↓
+                           Factual Answer
